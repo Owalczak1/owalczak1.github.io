@@ -1,115 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/x-icon" href="itis3135/images/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contract</title>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            background-color: rgb(233, 231, 231);
-        }
-        header, .box {
-            background-color: whitesmoke;
-            height: 150px;
-            width: auto;
-            border-left: 5px solid rgb(33, 33, 255);
-            border-radius: 10px;
-            box-shadow: 5px 5px 5px gray;
-        }
-
-        .header, .pee, a {
-            margin-left: 20px;
-            font-family: 'Roboto', sans-serif;
-            padding: 5px;
-            text-align: center;
-            
-        }
-        h2 {
-            text-align: center;
-        }
-        .main {
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 5px 5px 5px gray;
-            height: 700px;
-            background-color: whitesmoke;
-        }
-
-        footer {
-            background-color: whitesmoke;
-            height: 50px;
-            width: auto;
-            border-left: 5px solid rgb(33, 33, 255);
-            border-radius: 10px;
-            box-shadow: 5px 5px 5px gray;
-            text-align: center;
-        }
-
-        * {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-    </style>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/default.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>ITIS 3135 | About</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1 class="header">Oscar Walczak | ITIS3135 | Outstanding Woodpecker</h1>
-        <p class="pee">Course Page</p>
-        <nav>
-        <a href="">Home Page</a>
-        <a href="contract.html">Contract</a>
-        <a href="introduction.html">Introduction</a>
-    </header>
-    <section class="main">
+    <div data-include="components/header.html" data-replace="%page%:About"></div>
+    <main class="main">
         <hr>
-        <h2>About</h2>
-        <p>This page is built in part to demonstrate work for the Charlotte class ITIS3135 - Front-End Web Application Development for those sections run by Mr. von Briesen. You may find additional information about this course at <a href="https://divonbriesen.github.io/teaching/itis3135/" target="_blank">https://divonbriesen.github.io/teaching/itis3135/</a>.</p>
-        <p>This course seeks to provide students relevant experience in front-end web application development by building multiple websites using a variety of tools and techniques.</p>
-        <ol>
-            <li>The tools the course uses specifically include:</li>
-            <ol>
-                <li>VS Code</li>
-                <li>Emmet within VS Code</li>
-                <li>SFTP via Filezilla</li>
-                <li>Git via GitHub Desktop and GitHub.com</li>
-                <li>Various Browser Tools</li>
-                <li>The Accumulus Validator</li>
-            </ol>
-            <li>The sites students will build, and which this page links to, should include:</li>
-            <ol>
-                <li>A personal home portfolio</li>
-                <li>This course site</li>
-                <li>A design firm site - representing a fictitious/aspirational design/consulting firm for the student and named after them.</li>
-                <li>a Crappy page - intended to do all the bad things, so as to avoid them anywhere else</li>
-                <li>A whimsical product company</li>
-                <li>A student/colleague/peer management tool</li>
-                <li>A client project website</li>
-            </ol>
-            </ol>
-        </ol>
-    </section>
+        <h2>About This Course Site</h2>
+        <p>This page is built in part to demonstrate work for the Charlotte class ITIS 3135 - Front-End Web Application Development for sections taught by Mr. von Briesen. Additional information about the course is available on the <a href="https://divonbriesen.github.io/teaching/itis3135/" target="_blank" rel="noopener noreferrer">ITIS 3135 course site</a>.</p>
+        <p>This course seeks to provide students with relevant experience in front-end web application development by building multiple websites using a variety of tools and techniques.</p>
+
+        <h3>Course Tools</h3>
+        <p>The tools the course uses specifically include:</p>
+        <ul>
+            <li>VS Code</li>
+            <li>Emmet within VS Code</li>
+            <li>SFTP via FileZilla</li>
+            <li>Git via GitHub Desktop and GitHub.com</li>
+            <li>Various browser tools</li>
+            <li>The Accumulus Validator</li>
+        </ul>
+
+        <h3>Course Websites</h3>
+        <p>The sites students will build include the following. Links are provided for the sites currently available in my course portfolio.</p>
+        <ul>
+            <li><a href="../index.html">A personal home portfolio</a></li>
+            <li><a href="index.html">This course site</a></li>
+            <li><a href="Enterprise/index.html">A design firm site representing a fictitious or aspirational design/consulting firm named after the student</a></li>
+            <li>A Crappy page, intended to do all the bad things so as to avoid them anywhere else</li>
+            <li>A whimsical product company</li>
+            <li>A student/colleague/peer management tool</li>
+            <li>A client project website</li>
+        </ul>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
-<footer>
-    <h3 style="padding: 20px;">Oscar Walczak Firm ©2026</h3>
-    <nav class="navbar">
-        <a href="https://webpages.charlotte.edu/owalczak/" target="_blank">CLT Web</a> ||
-        <a href="https://owalczak1.github.io/" target="_blank">GitHub.io</a> ||
-        <a href="https://github.com/Owalczak1" target="_blank">GitHub</a> ||
-        <a href="https://www.freecodecamp.org/owalczak" target="_blank">FreeCodeCamp</a> ||
-        <a href="https://www.codecademy.com/profiles/owalczak" target="_blank">Codecademy</a>
-        <a href="https://www.linkedin.com/in/oscar-walczak-755801430/" target="_blank">LinkedIn</a> ||
-        <a href="Enterprise/index.html">Company Page</a>
-    </nav>
-</footer>
 </html>

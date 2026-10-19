@@ -1,111 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/x-icon" href="itis3135/images/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contract</title>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            background-color: rgb(233, 231, 231);
-        }
-        header, .box {
-            background-color: whitesmoke;
-            height: 150px;
-            width: auto;
-            border-left: 5px solid rgb(33, 33, 255);
-            border-radius: 10px;
-            box-shadow: 5px 5px 5px gray;
-        }
-
-        .header, .pee, a {
-            margin-left: 20px;
-            font-family: 'Roboto', sans-serif;
-            padding: 5px;
-            text-align: center;
-            
-        }
-        h2 {
-            text-align: center;
-        }
-        .main {
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 5px 5px 5px gray;
-            height: auto;
-            background-color: whitesmoke;
-        }
-
-        footer {
-            background-color: whitesmoke;
-            height: 50px;
-            width: auto;
-            border-left: 5px solid rgb(33, 33, 255);
-            border-radius: 10px;
-            box-shadow: 5px 5px 5px gray;
-            text-align: center;
-        }
-
-        * {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-    </style>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/default.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>ITIS 3135 | Introduction</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1 class="header">Oscar Walczak | ITIS3135 | Outstanding Woodpecker</h1>
-        <p class="pee">Course Page</p>
-        <nav>
-        <a href="index.html">Home Page</a>
-        <a href="contract.html">Contract</a>
-        <a href="introduction.html">Introduction</a>
-    </header>
-    <section class="main">
+    <div data-include="components/header.html" data-replace="%page%:Introduction"></div>
+    <main class="main">
         <hr>
         <h2>Oscar Walczak ~ Outstanding Woodpecker</h2>
-        <img src="images/srcimg.png" alt="My previous course introduction picture" style="display: block; margin-left: auto; margin-right: auto; width: 20%; border-radius: 10px; box-shadow: 5px 5px 5px gray;">
-        <p style="text-align: center;">My previous course introduction picture</p>
-        <p style="text-align: center;">My name is Oscar Walczak. I am a Computer Science major, and I like going to the UREC center on campus.</p>
-        <p><b>Personal Background: </b>Born in Massachussetts, grew up in huntersville</p>
-        <p><b>Professional Background: </b>Working at Harris Teeter part time, currently full time student</p>
-        <p><b>Academic Background: </b>Computer Science 2028 (expected)</p>
-        <p><b>Primary Work Computer (type, OS, and version): </b>Hp Omnibook X Flip, Windows 11, 24H2</p>
-        <p><b>Primary Work Location: </b>In my dorm</p>
-        <p><b>Alternate Computer & Location: </b>Uncc Library</p>
-        <p><b>Courses I'm Taking, & Why: </b></p>
-        <ol>
-            <li><b>ITIS 3135 Front-End Web App Development: </b>I am taking this course because it is required for the major and it will teach me alot of things about web development for the future.
-</li>
-            <li><b>ITIS 3130 Human-Centered Computing: </b>This class will teach me what is considered good and bad for customers using tech.</li>
-            <li><b>ITIS 3200 Intro to Info Security & Privacy: </b> This course will teach me about the basics of cybersecurity and the common practices to use inside of the field and in tech.
-</li>
-            <li><b>ITSC 2600 Computing Professionals II: </b>This class will provide me useful knowledge for getting jobs and successfully networking in the tech industry.</li>
-            <li><b>MATH 1120 Calculus: </b>This math course will provide basic knowledge for calculus that will be the foundation for future math courses and computer science courses.
-</li>
-</ol>
-    </section>
+        <figure>
+            <img class="intro-image" src="images/srcimg.png" alt="My previous course introduction picture">
+            <figcaption>My previous course introduction picture</figcaption>
+        </figure>
+        <p>My name is Oscar Walczak. I am a Computer Science major, and I like going to the UREC center on campus.</p>
+        <p><strong>Personal Background:</strong> Born in Massachussetts, grew up in huntersville</p>
+        <p><strong>Professional Background:</strong> Working at Harris Teeter part time, currently full time student</p>
+        <p><strong>Academic Background:</strong> Computer Science 2028 (expected)</p>
+        <p><strong>Primary Work Computer (type, OS, and version):</strong> Hp Omnibook X Flip, Windows 11, 24H2</p>
+        <p><strong>Primary Work Location:</strong> In my dorm</p>
+        <p><strong>Alternate Computer &amp; Location:</strong> Uncc Library</p>
+        <p><strong>Courses I'm Taking, &amp; Why:</strong></p>
+        <ul>
+            <li><strong>ITIS 3135 Front-End Web App Development:</strong> I am taking this course because it is required for the major and it will teach me alot of things about web development for the future.</li>
+            <li><strong>ITIS 3130 Human-Centered Computing:</strong> This class will teach me what is considered good and bad for customers using tech.</li>
+            <li><strong>ITIS 3200 Intro to Info Security &amp; Privacy:</strong> This course will teach me about the basics of cybersecurity and the common practices to use inside of the field and in tech.</li>
+            <li><strong>ITSC 2600 Computing Professionals II:</strong> This class will provide me useful knowledge for getting jobs and successfully networking in the tech industry.</li>
+            <li><strong>MATH 1120 Calculus:</strong> This math course will provide basic knowledge for calculus that will be the foundation for future math and computer science courses.</li>
+        </ul>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
-<footer>
-    <h3 style="padding: 20px;">Oscar Walczak Firm ©2026</h3>
-    <nav class="navbar">
-        <a href="https://webpages.charlotte.edu/owalczak/" target="_blank">CLT Web</a> ||
-        <a href="https://owalczak1.github.io/" target="_blank">GitHub.io</a> ||
-        <a href="https://github.com/Owalczak1" target="_blank">GitHub</a> ||
-        <a href="https://www.freecodecamp.org/owalczak" target="_blank">FreeCodeCamp</a> ||
-        <a href="https://www.codecademy.com/profiles/owalczak" target="_blank">Codecademy</a>
-        <a href="https://www.linkedin.com/in/oscar-walczak-755801430/" target="_blank">LinkedIn</a>
-    </nav>
-</footer>
 </html>

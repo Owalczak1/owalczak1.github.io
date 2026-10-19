@@ -1,92 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/x-icon" href="itis3135/images/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contract</title>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            background-color: rgb(233, 231, 231);
-        }
-        header, .box {
-            background-color: whitesmoke;
-            height: 150px;
-            width: auto;
-            border-left: 5px solid rgb(33, 33, 255);
-            border-radius: 10px;
-            box-shadow: 5px 5px 5px gray;
-        }
-
-        .header, .pee, a {
-            margin-left: 20px;
-            font-family: 'Roboto', sans-serif;
-            padding: 5px;
-            text-align: center;
-            
-        }
-        h2 {
-            text-align: center;
-        }
-        .main {
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 5px 5px 5px gray;
-            height: 700px;
-            background-color: whitesmoke;
-        }
-
-        footer {
-            background-color: whitesmoke;
-            height: 50px;
-            width: auto;
-            border-left: 5px solid rgb(33, 33, 255);
-            border-radius: 10px;
-            box-shadow: 5px 5px 5px gray;
-            text-align: center;
-        }
-
-        * {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-    </style>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/default.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>ITIS 3135 | Home</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1 class="header">Oscar Walczak | ITIS3135 | Outstanding Woodpecker</h1>
-        <p class="pee">Course Page</p>
-        <nav>
-        <a href="">Home Page</a>
-        <a href="contract.html">Contract</a>
-        <a href="introduction.html">Introduction</a>
-        <a href="about.html">About</a>
-    </header>
-    <section class="main">
+    <div data-include="components/header.html" data-replace="%page%:Home"></div>
+    <main class="main">
         <hr>
-        <h2>Home page</h2>
-    </section>
+        <h2>Home Page</h2>
+        <p>Welcome to my ITIS 3135 course site. Visit my <a href="../index.html">personal page</a> or my <a href="Enterprise/index.html">design firm site</a>.</p>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
-<footer>
-    <h3 style="padding: 20px;">Oscar Walczak Firm ©2026</h3>
-    <nav class="navbar">
-        <a href="https://webpages.charlotte.edu/owalczak/" target="_blank">CLT Web</a> ||
-        <a href="https://owalczak1.github.io/" target="_blank">GitHub.io</a> ||
-        <a href="https://github.com/Owalczak1" target="_blank">GitHub</a> ||
-        <a href="https://www.freecodecamp.org/owalczak" target="_blank">FreeCodeCamp</a> ||
-        <a href="https://www.codecademy.com/profiles/owalczak" target="_blank">Codecademy</a>
-        <a href="https://www.linkedin.com/in/oscar-walczak-755801430/" target="_blank">LinkedIn</a> ||
-        <a href="Enterprise/index.html">Company Page</a>
-    </nav>
-</footer>
 </html>
