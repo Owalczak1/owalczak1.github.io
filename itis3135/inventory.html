@@ -8,14 +8,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>ITIS 3135 | Inventory</title>
+    <title>Oscar Walczak's Outstanding Woodpecker | ITIS3135 | Inventory Management</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div data-include="components/header.html" data-replace="%page%:Inventory"></div>
     <main class="main">
-        <hr>
         <h2>Inventory Management</h2>
+        <hr>
+        <table>
+            <caption>Woodpecker Workshop Inventory</caption>
+            <thead>
+                <tr><th scope="col">Item</th><th scope="col">Quantity</th><th scope="col">Status</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Field notebooks</td><td>12</td><td>In stock</td></tr>
+                <tr><td>Camera batteries</td><td>8</td><td>In stock</td></tr>
+                <tr><td>Trail markers</td><td>4</td><td>Reorder soon</td></tr>
+            </tbody>
+        </table>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>

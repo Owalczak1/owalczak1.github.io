@@ -5,6 +5,9 @@
 
 body {
     margin: 8px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rgb(233, 231, 231);
     color: #222;
 }
@@ -36,6 +39,18 @@ header {
     margin: 8px 0;
 }
 
+.tagline {
+    margin: 8px 0;
+    text-align: center;
+}
+
+.site-logo {
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin: 8px auto;
+}
+
 .site-nav,
 .secondary-nav,
 .footer-nav {
@@ -56,12 +71,20 @@ header {
 }
 
 a {
+    color: #155e75;
     padding: 5px;
+}
+
+a:visited {
+    color: #155e75;
 }
 
 .main {
     min-height: 300px;
     margin: 20px;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px;
     border-radius: 10px;
     background-color: whitesmoke;
@@ -69,7 +92,38 @@ a {
 }
 
 h2 {
+    font-family: Georgia, serif;
     text-align: center;
+}
+
+h6 {
+    margin: 16px 0;
+    font-size: 2rem;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.card-grid img {
+    width: 100%;
+    height: auto;
+}
+
+.page-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .main li {
@@ -108,5 +162,14 @@ footer {
 
     .intro-image {
         width: min(65%, 240px);
+    }
+
+    h6 {
+        font-size: 1.4rem;
+        white-space: normal;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
