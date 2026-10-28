@@ -37,11 +37,22 @@ header {
 }
 
 .site-nav,
+.secondary-nav,
 .footer-nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+.secondary-nav {
+    align-items: center;
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
+.secondary-nav span {
+    font-weight: 700;
 }
 
 a {
