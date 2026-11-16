@@ -114,6 +114,7 @@ h6 {
     padding: 12px;
     border: 1px solid #b8c5c7;
     border-radius: 8px;
+    /* White cards give the wildlife photographs and captions a clean background. */
     background-color: white;
 }
 
@@ -169,6 +170,7 @@ main form button {
     border: 0;
     border-radius: 4px;
     background-color: #155e75;
+    /* White button text maintains strong contrast against the teal background. */
     color: white;
     font: inherit;
     font-weight: 700;
@@ -198,6 +200,49 @@ main td {
     padding: 10px;
     border: 1px solid #52666b;
     text-align: left;
+}
+
+/* These classes keep the picture-format and image-quality comparisons grouped and responsive. */
+.photo-format-links,
+.distorted-image-grid,
+.resolution-comparison-grid {
+    display: grid;
+    gap: 12px;
+    margin: 16px 0;
+}
+
+.photo-format-links {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.photo-format-links a {
+    display: block;
+    padding: 12px;
+    border: 1px solid #b8c5c7;
+    border-radius: 6px;
+    /* White link cards keep the format labels readable. */
+    background-color: white;
+}
+
+.distorted-image-grid,
+.resolution-comparison-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.distorted-image-grid figure,
+.resolution-comparison-grid figure {
+    min-width: 0;
+    margin: 0;
+}
+
+.distorted-image-grid img {
+    max-width: 100%;
+    height: auto;
+}
+
+.resolution-comparison-grid img {
+    width: 100%;
+    height: auto;
 }
 
 .page-title {
@@ -257,5 +302,14 @@ footer {
 
     .card-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .photo-format-links {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .distorted-image-grid,
+    .resolution-comparison-grid {
+        grid-template-columns: 1fr;
     }
 }

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Oscar Walczak's Outstanding Woodpecker | ITIS3135 | Everything Pictures</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div data-include="components/header.html" data-replace="%page%:Pictures"></div>
+    <main class="main">
+        <h2>Everything Pictures</h2>
+        <p>This page explores how image formats, file dimensions, and display proportions affect pictures on the web. The ferry photograph is credited to its Pexels photographer; its original and edited versions are compared below.</p>
+
+        <section>
+            <h3>A Ferry Crossing The Tagus River | Pexels Photograph</h3>
+            <p>This colorful Lisbon ferry photograph was taken by <a href="https://www.pexels.com/@henrique-baldy-1159969224/" target="_blank" rel="noopener noreferrer">Henrique Baldy</a>. His Pexels portfolio also features coastal Portugal imagery, including ocean and beach scenes. The wide blue sky, detailed shoreline, and orange ferry make this photograph useful for comparing color, formats, and proportions. The full-size JPEG is 4032 by 3024 pixels (about 1.81 MB); <a href="https://www.pexels.com/photo/crossing-tagus-river-lisbon-27926305/" target="_blank" rel="noopener noreferrer">view its Pexels photo page</a> for source details.</p>
+            <figure>
+                <a href="https://www.pexels.com/photo/crossing-tagus-river-lisbon-27926305/" target="_blank" rel="noopener noreferrer"><img src="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels.jpg" alt="An orange-and-white ferry crossing blue water in front of the Lisbon skyline" width="4032" height="3024"></a>
+                <figcaption>A ferry moves across the Tagus River with Lisbon on the horizon.</figcaption>
+            </figure>
+
+            <article>
+                <h4>Original Image And Alternate Formats</h4>
+                <p>Open each file to compare the original color JPEG with a GIF conversion, a grayscale JPEG, and a black-and-white JPEG.</p>
+                <nav class="photo-format-links" aria-label="Pexels photograph formats">
+                    <a href="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels.jpg" target="_blank" rel="noopener noreferrer">Original JPEG — 4032 × 3024 — 1.81 MB</a>
+                    <a href="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels.gif" target="_blank" rel="noopener noreferrer">Color GIF — 4032 × 3024 — 3.83 MB</a>
+                    <a href="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-grayscale.jpg" target="_blank" rel="noopener noreferrer">Grayscale JPEG — 4032 × 3024 — 2.33 MB</a>
+                    <a href="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-black-and-white.jpg" target="_blank" rel="noopener noreferrer">Black And White JPEG — 4032 × 3024 — 2.60 MB</a>
+                </nav>
+            </article>
+
+            <article>
+                <h4>Downsizing The Original With CSS</h4>
+                <p>The source stays at 4032 by 3024 pixels and keeps its 4:3 proportions; CSS displays it at 20% of the available content width.</p>
+                <!-- Inline sizing is intentional here to demonstrate CSS scaling without changing the source file. -->
+                <figure>
+                    <img src="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels.jpg" alt="The original Lisbon ferry photograph displayed at a smaller size without changing its proportions" width="4032" height="3024" style="width: 20%; height: auto;">
+                    <figcaption>The original image scaled down in the browser; its pixels and file size are unchanged.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Proper Reduction In An Image Editor</h4>
+                <p>This separate editor-resized copy is 600 by 450 pixels, preserving the original 4:3 ratio. Its file size is about 0.07 MB, smaller than the 1.81 MB original.</p>
+                <figure>
+                    <img src="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-600x450.jpg" alt="The Lisbon ferry photograph properly reduced to 600 by 450 pixels" width="600" height="450">
+                    <figcaption>The resized copy keeps the ferry and skyline in their original proportions.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Improper Image Proportions</h4>
+                <p>These editor-resized copies intentionally alter the original 600 by 450 proportions. Compare the flattened versions at 600 by 300 and 600 by 201 with the narrowed versions at 400 by 450 and 268 by 450.</p>
+                <!-- This grid groups the deliberately distorted image comparisons. -->
+                <div class="distorted-image-grid">
+                    <figure>
+                        <img src="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-600x300.jpg" alt="Distorted ferry photograph compressed vertically to 600 by 300 pixels" width="600" height="300">
+                        <figcaption>600 × 300 pixels: compressed vertically.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-600x201.jpg" alt="Distorted ferry photograph compressed vertically to 600 by 201 pixels" width="600" height="201">
+                        <figcaption>600 × 201 pixels: compressed further vertically.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-400x450.jpg" alt="Distorted ferry photograph compressed horizontally to 400 by 450 pixels" width="400" height="450">
+                        <figcaption>400 × 450 pixels: compressed horizontally.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-268x450.jpg" alt="Distorted ferry photograph compressed horizontally to 268 by 450 pixels" width="268" height="450">
+                        <figcaption>268 × 450 pixels: compressed further horizontally.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <h4>Improper Enlarging With CSS</h4>
+                <p>The first copy has 600 by 450 pixels. The second was reduced to 150 by 113 pixels, about one quarter of the width and height, then both are enlarged to the same display size.</p>
+                <!-- This grid places the full-resolution and low-resolution examples at equal display sizes. -->
+                <div class="resolution-comparison-grid">
+                    <figure>
+                        <img src="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-600x450.jpg" alt="Full-resolution 600 by 450 ferry image enlarged for comparison" width="600" height="450">
+                        <figcaption>600 × 450 source enlarged in the browser.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-150x113.jpg" alt="Low-resolution 150 by 113 ferry image enlarged to match the full-resolution example" width="150" height="113">
+                        <figcaption>150 × 113 source displayed at the same size; detail is visibly lost.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <h4>Pixel Dimensions And File Size</h4>
+                <p>The original 4032 by 3024 JPEG contains 12,192,768 pixels and uses about 1.81 MB. The editor-sized 600 by 450 copy contains 270,000 pixels and uses about 0.07 MB. CSS display scaling changes neither the original pixel count nor its download size, while reducing both dimensions to about half leaves roughly one quarter of the pixels.</p>
+            </article>
+        </section>
+        <hr>
+        <section>
+            <h3>Charlotte Skyline At Night | Personal Photograph</h3>
+            <p>This night photograph shows Charlotte's illuminated skyline, including blue-lit high-rise buildings, the JW Marriott sign, and the surrounding streetscape. The image was provided by Oscar Walczak for this assignment; the photographer is not identified. Its original portrait JPEG is 768 by 1364 pixels (about 0.25 MB). The photo captures the city's architecture and nighttime lighting, making it a useful second image for comparing formats, resizing, and distortion.</p>
+            <figure>
+                <img src="images/charlotte-skyline-at-night@oscar-walczak_personal.jpg" alt="Charlotte's nighttime skyline with tall buildings illuminated in blue and red" width="768" height="1364">
+                <figcaption>Charlotte's high-rise buildings glow against the night sky.</figcaption>
+            </figure>
+
+            <article>
+                <h4>Original Image And Alternate Formats</h4>
+                <p>Open each file to compare the original color JPEG with a GIF conversion, a grayscale JPEG, and a black-and-white JPEG.</p>
+                <nav class="photo-format-links" aria-label="Charlotte skyline photograph formats">
+                    <a href="images/charlotte-skyline-at-night@oscar-walczak_personal.jpg" target="_blank" rel="noopener noreferrer">Original JPEG — 768 × 1364 — 0.25 MB</a>
+                    <a href="images/charlotte-skyline-at-night@oscar-walczak_personal.gif" target="_blank" rel="noopener noreferrer">Color GIF — 768 × 1364 — 0.45 MB</a>
+                    <a href="images/charlotte-skyline-at-night@oscar-walczak_personal-grayscale.jpg" target="_blank" rel="noopener noreferrer">Grayscale JPEG — 768 × 1364 — 0.22 MB</a>
+                    <a href="images/charlotte-skyline-at-night@oscar-walczak_personal-black-and-white.jpg" target="_blank" rel="noopener noreferrer">Black And White JPEG — 768 × 1364 — 0.15 MB</a>
+                </nav>
+            </article>
+
+            <article>
+                <h4>Downsizing The Original With CSS</h4>
+                <p>The source stays at 768 by 1364 pixels and keeps its portrait proportions; CSS displays it at 20% of the available content width.</p>
+                <!-- Inline sizing is intentional here to demonstrate CSS scaling without changing the source file. -->
+                <figure>
+                    <img src="images/charlotte-skyline-at-night@oscar-walczak_personal.jpg" alt="The original Charlotte skyline photograph displayed smaller without changing its proportions" width="768" height="1364" style="width: 20%; height: auto;">
+                    <figcaption>The original image scaled down in the browser; its pixels and file size are unchanged.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Proper Reduction In An Image Editor</h4>
+                <p>This separate editor-resized copy is 600 by 1066 pixels, keeping almost the same portrait proportions as the original. Its file size is about 0.14 MB, smaller than the 0.25 MB original.</p>
+                <figure>
+                    <img src="images/charlotte-skyline-at-night@oscar-walczak_personal-600x1066.jpg" alt="The Charlotte skyline photograph properly reduced to 600 by 1066 pixels" width="600" height="1066">
+                    <figcaption>The reduced copy keeps the buildings and streetscape in their original proportions.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Improper Image Proportions</h4>
+                <p>These editor-resized copies intentionally alter the proportions of the 600 by 1066 image. Compare the flattened versions at 600 by 711 and 600 by 474 with the narrowed versions at 400 by 1066 and 268 by 1066.</p>
+                <!-- This grid groups the deliberately distorted image comparisons. -->
+                <div class="distorted-image-grid">
+                    <figure>
+                        <img src="images/charlotte-skyline-at-night@oscar-walczak_personal-600x711.jpg" alt="Charlotte skyline compressed vertically to 600 by 711 pixels" width="600" height="711">
+                        <figcaption>600 × 711 pixels: compressed vertically.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/charlotte-skyline-at-night@oscar-walczak_personal-600x474.jpg" alt="Charlotte skyline compressed further vertically to 600 by 474 pixels" width="600" height="474">
+                        <figcaption>600 × 474 pixels: compressed further vertically.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/charlotte-skyline-at-night@oscar-walczak_personal-400x1066.jpg" alt="Charlotte skyline compressed horizontally to 400 by 1066 pixels" width="400" height="1066">
+                        <figcaption>400 × 1066 pixels: compressed horizontally.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/charlotte-skyline-at-night@oscar-walczak_personal-268x1066.jpg" alt="Charlotte skyline compressed further horizontally to 268 by 1066 pixels" width="268" height="1066">
+                        <figcaption>268 × 1066 pixels: compressed further horizontally.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <h4>Improper Enlarging With CSS</h4>
+                <p>The first copy has 600 by 1066 pixels. The second was reduced to 150 by 266 pixels, about one quarter of the width and height, then both are enlarged to the same display size.</p>
+                <!-- This grid places the full-resolution and low-resolution examples at equal display sizes. -->
+                <div class="resolution-comparison-grid">
+                    <figure>
+                        <img src="images/charlotte-skyline-at-night@oscar-walczak_personal-600x1066.jpg" alt="Full-resolution 600 by 1066 Charlotte skyline image enlarged for comparison" width="600" height="1066">
+                        <figcaption>600 × 1066 source enlarged in the browser.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/charlotte-skyline-at-night@oscar-walczak_personal-150x266.jpg" alt="Low-resolution 150 by 266 Charlotte skyline image enlarged to match the full-resolution example" width="150" height="266">
+                        <figcaption>150 × 266 source displayed at the same size; detail is visibly lost.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <h4>Pixel Dimensions And File Size</h4>
+                <p>The original 768 by 1364 JPEG contains 1,047,552 pixels and uses about 0.25 MB. The editor-sized 600 by 1066 copy contains 639,600 pixels and uses about 0.14 MB. CSS display scaling changes neither the original pixel count nor its download size.</p>
+            </article>
+        </section>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+</body>
+</html>
