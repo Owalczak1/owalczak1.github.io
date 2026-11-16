@@ -12,22 +12,40 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div data-include="components/header.html" data-replace="%page%:Survey"></div>
+    <div data-include="components/header.html" data-replace="%page%:Survey Form"></div>
     <main class="main">
         <h2>Survey Form</h2>
-        <hr>
+        <p>Help Ozzie plan the next Woodpecker Field Station walk. This demo does not send or store your response.</p>
         <form>
-            <label for="visitor-name">Name</label>
-            <input id="visitor-name" name="name" type="text" placeholder="Your name">
-            <label for="visitor-email">Email</label>
-            <input id="visitor-email" name="email" type="email" placeholder="you@example.com">
-            <label for="visit-reason">What brought you here?</label>
-            <input id="visit-reason" name="reason" type="text" placeholder="Tell us what you are exploring">
-            <button type="submit">Submit Survey</button>
+            <label for="visitor-name">Your name
+                <input id="visitor-name" name="visitor-name" type="text" autocomplete="name" required>
+            </label>
+            <label for="visitor-email">Email address
+                <input id="visitor-email" name="visitor-email" type="email" autocomplete="email" required>
+            </label>
+            <label for="favorite-find">Which woodland neighbor would you most like to spot?
+                <select id="favorite-find" name="favorite-find" required>
+                    <option value="">Choose one</option>
+                    <option value="woodpecker">Woodpecker</option>
+                    <option value="toad">Toad</option>
+                    <option value="salamander">Salamander</option>
+                    <option value="turtle">Turtle</option>
+                    <option value="snail">Snail</option>
+                </select>
+            </label>
+            <fieldset>
+                <legend>What would you like to do on the walk?</legend>
+                <label><input name="walk-activity" type="radio" value="birdwatching" required> Watch for birds</label>
+                <label><input name="walk-activity" type="radio" value="field-notes"> Keep field notes</label>
+                <label><input name="walk-activity" type="radio" value="trail-care"> Help care for the trail</label>
+            </fieldset>
+            <button type="submit">Preview My Response</button>
+            <output aria-live="polite"></output>
         </form>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/field-station-survey.js"></script>
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>

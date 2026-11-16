@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img">
+    <title>Woodpecker Field Kit</title>
+    <desc>A green field notebook with a pencil and an acorn trail badge.</desc>
+    <rect width="640" height="420" rx="24" fill="#e9e7e7"/>
+    <rect x="106" y="52" width="310" height="318" rx="18" fill="#155e4b"/>
+    <rect x="128" y="72" width="274" height="278" rx="10" fill="#fffdf5"/>
+    <path d="M170 130h188M170 170h188M170 210h148M170 250h188M170 290h148" stroke="#9bb6a7" stroke-width="8" stroke-linecap="round"/>
+    <path d="m460 86 44-17 105 273-44 17z" fill="#e6a23c"/>
+    <path d="m460 86 22-9 105 273-22 9z" fill="#f3c267"/>
+    <path d="m504 69 22-9 105 273-22 9z" fill="#d97847"/>
+    <path d="m560 359 49-18-25 45z" fill="#4a423b"/>
+    <circle cx="192" cy="320" r="52" fill="#f3c267" stroke="#155e4b" stroke-width="8"/>
+    <path d="M179 310c0-22 30-22 30 0l-3 31h-24z" fill="#9b5b2c"/>
+    <path d="M173 308h42c-3-14-10-21-21-21s-18 7-21 21z" fill="#155e4b"/>
+</svg>

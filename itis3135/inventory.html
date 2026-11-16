@@ -8,23 +8,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>Oscar Walczak's Outstanding Woodpecker | ITIS3135 | Inventory Management</title>
+    <title>Oscar Walczak's Outstanding Woodpecker | ITIS3135 | Book Inventory App</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div data-include="components/header.html" data-replace="%page%:Inventory"></div>
+    <div data-include="components/header.html" data-replace="%page%:Book Inventory App"></div>
     <main class="main">
-        <h2>Inventory Management</h2>
-        <hr>
+        <h2>Book Inventory App</h2>
+        <p>Ozzie's field station keeps a small reference shelf for birders, trail stewards, and curious neighbors.</p>
         <table>
-            <caption>Woodpecker Workshop Inventory</caption>
+            <caption>Woodpecker Field Station Guide Shelf</caption>
             <thead>
-                <tr><th scope="col">Item</th><th scope="col">Quantity</th><th scope="col">Status</th></tr>
+                <tr>
+                    <th scope="col">Field Guide</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Copies</th>
+                    <th scope="col">Shelf Status</th>
+                </tr>
             </thead>
             <tbody>
-                <tr><td>Field notebooks</td><td>12</td><td>In stock</td></tr>
-                <tr><td>Camera batteries</td><td>8</td><td>In stock</td></tr>
-                <tr><td>Trail markers</td><td>4</td><td>Reorder soon</td></tr>
+                <tr>
+                    <td>The Sibley Guide to Birds</td>
+                    <td>David Allen Sibley</td>
+                    <td>3</td>
+                    <td>Available</td>
+                </tr>
+                <tr>
+                    <td>Birds of the Carolinas</td>
+                    <td>Eloise F. Potter, James F. Parnell, and Robert P. Teulings</td>
+                    <td>2</td>
+                    <td>Available</td>
+                </tr>
+                <tr>
+                    <td>National Geographic Field Guide to the Birds of North America</td>
+                    <td>Jonathan Alderfer, editor</td>
+                    <td>1</td>
+                    <td>On the checkout desk</td>
+                </tr>
             </tbody>
         </table>
     </main>
