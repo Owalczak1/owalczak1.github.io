@@ -14,7 +14,6 @@ body {
 
 header,
 footer {
-    width: 100%;
     background-color: whitesmoke;
     border-left: 5px solid rgb(33, 33, 255);
     border-radius: 10px;
@@ -295,7 +294,7 @@ footer {
         width: min(65%, 240px);
     }
 
-    h6 {
+    main h6 {
         font-size: 1.4rem;
         white-space: normal;
     }
