@@ -239,16 +239,19 @@
         </section>
         <section id="introduction-result" hidden>
             <article id="introduction-content"></article>
-            <section aria-label="Generated introduction formats">
-                <h3>Generate Another Format</h3>
-                <div class="form-actions">
-                    <button id="generate-html" type="button">Generate HTML</button>
-                    <button id="generate-json" type="button">Generate JSON</button>
-                    <button id="generate-xml" type="button">Generate XML</button>
-                </div>
-                <pre id="generated-output" hidden aria-live="polite"></pre>
-            </section>
             <p><a id="reset-introduction" href="#introduction-form">Reset the form to create another introduction</a></p>
+        </section>
+        <section aria-labelledby="generate-code-heading">
+            <h3 id="generate-code-heading">Generate Code</h3>
+            <div class="form-actions">
+                <button id="generate-html" type="button">Generate HTML</button>
+                <button id="generate-json" type="button">Generate JSON</button>
+                <button id="generate-xml" type="button">Generate XML</button>
+            </div>
+        </section>
+        <section id="generated-output-section" hidden aria-labelledby="generated-code-heading">
+            <h3 id="generated-code-heading">Generated Code</h3>
+            <textarea id="generated-output" rows="16" readonly spellcheck="false" aria-labelledby="generated-code-heading"></textarea>
         </section>
     </main>
     <div data-include="components/footer.html"></div>

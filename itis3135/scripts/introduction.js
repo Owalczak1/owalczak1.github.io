@@ -4,6 +4,7 @@ if (form) {
     const formSection = document.getElementById("introduction-form-section");
     const resultSection = document.getElementById("introduction-result");
     const introductionContent = document.getElementById("introduction-content");
+    const generatedOutputSection = document.getElementById("generated-output-section");
     const generatedOutput = document.getElementById("generated-output");
     const courseList = document.getElementById("course-list");
     const courseMessage = document.getElementById("course-message");
@@ -12,6 +13,7 @@ if (form) {
         .map((course) => course.cloneNode(true));
     let nextCourseNumber = defaultCourseRows.length + 1;
     let uploadedImageUrl = "";
+    let uploadedImageFile = null;
 
     function addLabeledControl(parent, labelText, name, courseNumber, type) {
         const label = document.createElement("label");
@@ -64,14 +66,19 @@ if (form) {
         formError.textContent = "";
         form.querySelectorAll('input[type="url"]').forEach((input) => input.setCustomValidity(""));
         introductionContent.replaceChildren();
-        generatedOutput.textContent = "";
-        generatedOutput.hidden = true;
+        clearGeneratedOutput();
         resultSection.hidden = true;
         formSection.hidden = false;
         if (uploadedImageUrl) {
             URL.revokeObjectURL(uploadedImageUrl);
             uploadedImageUrl = "";
+            uploadedImageFile = null;
         }
+    }
+
+    function clearGeneratedOutput() {
+        generatedOutput.value = "";
+        generatedOutputSection.hidden = true;
     }
 
     function getValue(name) {
@@ -113,9 +120,29 @@ if (form) {
         }));
     }
 
+    function getUploadedImageUrl(uploadedPicture) {
+        if (!uploadedPicture) {
+            if (uploadedImageUrl) {
+                URL.revokeObjectURL(uploadedImageUrl);
+                uploadedImageUrl = "";
+                uploadedImageFile = null;
+            }
+            return "";
+        }
+        if (uploadedPicture !== uploadedImageFile) {
+            if (uploadedImageUrl) {
+                URL.revokeObjectURL(uploadedImageUrl);
+            }
+            uploadedImageFile = uploadedPicture;
+            uploadedImageUrl = URL.createObjectURL(uploadedPicture);
+        }
+        return uploadedImageUrl;
+    }
+
     function buildIntroduction() {
         const name = getFullName();
         const uploadedPicture = form.elements.namedItem("picture-upload").files[0];
+        const uploadedPictureUrl = getUploadedImageUrl(uploadedPicture);
         const pictureSource = getValue("picture-source") || "images/srcimg.png";
         const pictureCaption = getValue("picture-caption");
         const courses = getCourses();
@@ -146,9 +173,8 @@ if (form) {
         figure.className = "intro-figure";
         image.className = "intro-image";
         image.src = pictureSource;
-        if (uploadedPicture) {
-            uploadedImageUrl = URL.createObjectURL(uploadedPicture);
-            image.src = uploadedImageUrl;
+        if (uploadedPictureUrl) {
+            image.src = uploadedPictureUrl;
         }
         image.alt = pictureCaption;
         caption.textContent = pictureCaption;
@@ -228,7 +254,7 @@ if (form) {
         }
         introduction.append(links);
 
-        introductionContent.replaceChildren(introduction);
+        return introduction;
     }
 
     function getIntroductionData() {
@@ -286,15 +312,20 @@ if (form) {
     }
 
     function showGeneratedOutput(content) {
-        generatedOutput.textContent = content;
-        generatedOutput.hidden = false;
+        generatedOutput.value = content;
+        generatedOutputSection.hidden = false;
+    }
+
+    function generateHtml() {
+        const wrapper = document.createElement("div");
+        wrapper.append(buildIntroduction());
+        return Array.from(wrapper.children)
+            .map((element) => element.outerHTML)
+            .join("\n");
     }
 
     document.getElementById("generate-html").addEventListener("click", () => {
-        const html = Array.from(introductionContent.children)
-            .map((element) => element.outerHTML)
-            .join("\n");
-        showGeneratedOutput(html);
+        showGeneratedOutput(generateHtml());
     });
 
     document.getElementById("generate-json").addEventListener("click", () => {
@@ -336,6 +367,7 @@ if (form) {
         });
         formError.textContent = "";
         courseMessage.textContent = "";
+        clearGeneratedOutput();
     });
 
     form.querySelector('button[type="reset"]').addEventListener("click", () => {
@@ -343,8 +375,12 @@ if (form) {
             restoreDefaultCourses();
             formError.textContent = "";
             form.querySelectorAll('input[type="url"]').forEach((input) => input.setCustomValidity(""));
+            clearGeneratedOutput();
         }, 0);
     });
+
+    form.addEventListener("input", clearGeneratedOutput);
+    form.addEventListener("change", clearGeneratedOutput);
 
     form.querySelectorAll('input[type="url"]').forEach((input) => {
         input.addEventListener("input", () => input.setCustomValidity(""));
@@ -380,7 +416,7 @@ if (form) {
             return;
         }
 
-        buildIntroduction();
+        introductionContent.replaceChildren(buildIntroduction());
         formSection.hidden = true;
         resultSection.hidden = false;
     });

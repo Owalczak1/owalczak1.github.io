@@ -201,11 +201,17 @@ main form#introduction-form .course-list {
 }
 
 main #generated-output {
+    display: block;
+    width: 100%;
+    min-height: 320px;
+    margin-top: 12px;
     overflow-wrap: anywhere;
     padding: 12px;
     border: 1px solid #52666b;
     border-radius: 4px;
     white-space: pre-wrap;
+    font-family: Consolas, monospace;
+    resize: vertical;
 }
 
 main form#introduction-form #form-error,
