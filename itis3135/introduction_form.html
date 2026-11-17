@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Oscar Walczak's Outstanding Woodpecker | ITIS3135 | Introduction Form</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div data-include="components/header.html" data-replace="%page%:Introduction Form"></div>
+    <main class="main">
+        <h2>Introduction Form</h2>
+        <!-- IDs connect labels to their controls and let the script manage the form, courses, and result. -->
+        <section id="introduction-form-section">
+            <h3>Please Submit the Form Below.</h3>
+            <form id="introduction-form">
+                <fieldset>
+                    <legend>Your Name</legend>
+                    <label for="first-name">First Name
+                        <input id="first-name" name="first-name" type="text" value="Oscar" placeholder="First name" autocomplete="given-name" required>
+                    </label>
+                    <label for="middle-name">Middle Name or Initial (optional)
+                        <input id="middle-name" name="middle-name" type="text" placeholder="Middle name or initial" autocomplete="additional-name">
+                    </label>
+                    <label for="preferred-name">Nickname or Preferred Name (optional)
+                        <input id="preferred-name" name="preferred-name" type="text" placeholder="Preferred name">
+                    </label>
+                    <label for="last-name">Last Name
+                        <input id="last-name" name="last-name" type="text" value="Walczak" placeholder="Last name" autocomplete="family-name" required>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Acknowledgment</legend>
+                    <label for="acknowledgment">Acknowledgment Statement
+                        <textarea id="acknowledgment" name="acknowledgment" placeholder="Enter your acknowledgment statement" required>I acknowledge that the work I submit is my own and that I have followed the course academic integrity policy.</textarea>
+                    </label>
+                    <label for="acknowledgment-date">Acknowledgment Date
+                        <input id="acknowledgment-date" name="acknowledgment-date" type="date" value="2026-11-16" placeholder="YYYY-MM-DD" required>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Woodpecker Mascot</legend>
+                    <label for="mascot-adjective">Mascot Adjective
+                        <input id="mascot-adjective" name="mascot-adjective" type="text" value="Outstanding" placeholder="Mascot adjective" required>
+                    </label>
+                    <label for="mascot-animal">Mascot Animal
+                        <input id="mascot-animal" name="mascot-animal" type="text" value="Woodpecker" placeholder="Mascot animal" required>
+                    </label>
+                    <label for="divider">Divider
+                        <input id="divider" name="divider" type="text" value="|" placeholder="For example: | or ~" required>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Picture</legend>
+                    <label for="picture-source">Picture URL or path
+                        <input id="picture-source" name="picture-source" type="text" value="images/srcimg.png" placeholder="Image URL or path">
+                    </label>
+                    <label for="picture-upload">Upload a picture to use instead (optional)
+                        <input id="picture-upload" name="picture-upload" type="file" accept="image/*" aria-describedby="picture-help">
+                    </label>
+                    <p id="picture-help">If no picture is selected or entered, the original introduction picture will be used.</p>
+                    <label for="picture-caption">Picture Caption
+                        <input id="picture-caption" name="picture-caption" type="text" value="My previous course introduction picture" placeholder="Picture caption" required>
+                    </label>
+                </fieldset>
+
+                <label for="personal-statement">Personal Statement
+                    <textarea id="personal-statement" name="personal-statement" placeholder="At least three complete sentences about yourself" required>I am a Computer Science major, and I like going to the UREC center on campus. I am a full-time student at UNC Charlotte. I am interested in learning more about web development and technology.</textarea>
+                </label>
+
+                <fieldset>
+                    <legend>Introduction Bullets</legend>
+                    <label for="personal-background">Personal Background
+                        <textarea id="personal-background" name="personal-background" placeholder="Personal background" required>Born in Massachussetts, grew up in huntersville</textarea>
+                    </label>
+                    <label for="professional-background">Professional Background
+                        <textarea id="professional-background" name="professional-background" placeholder="Professional background" required>Working at Harris Teeter part time, currently full time student</textarea>
+                    </label>
+                    <label for="academic-background">Academic Background
+                        <textarea id="academic-background" name="academic-background" placeholder="Academic background" required>Computer Science 2028 (expected)</textarea>
+                    </label>
+                    <label for="work-computer">Primary Work Computer (type, OS, and version)
+                        <textarea id="work-computer" name="work-computer" placeholder="Computer type, operating system, and version" required>Hp Omnibook X Flip, Windows 11, 24H2</textarea>
+                    </label>
+                    <label for="work-location">Primary Work Location
+                        <textarea id="work-location" name="work-location" placeholder="Primary work location" required>In my dorm</textarea>
+                    </label>
+                    <label for="alternate-computer">Alternate Computer &amp; Location
+                        <textarea id="alternate-computer" name="alternate-computer" placeholder="Alternate computer and location" required>Uncc Library</textarea>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Courses I'm Taking, &amp; Why</legend>
+                    <!-- This wrapper lets the script add and remove course fieldsets together. -->
+                    <div id="course-list" class="course-list">
+                        <fieldset class="course-entry">
+                            <legend>Course 1</legend>
+                            <label for="course-1-department">Department
+                                <input id="course-1-department" name="course-department" type="text" value="ITIS" placeholder="Department" required>
+                            </label>
+                            <label for="course-1-number">Number
+                                <input id="course-1-number" name="course-number" type="text" value="3135" placeholder="Course number" required>
+                            </label>
+                            <label for="course-1-name">Name
+                                <input id="course-1-name" name="course-name" type="text" value="Front-End Web App Development" placeholder="Course name" required>
+                            </label>
+                            <label for="course-1-reason">Reason
+                                <textarea id="course-1-reason" name="course-reason" placeholder="Why are you taking this course?" required>I am taking this course because it is required for the major and it will teach me alot of things about web development for the future.</textarea>
+                            </label>
+                            <button class="remove-course" type="button">Remove course</button>
+                        </fieldset>
+                        <fieldset class="course-entry">
+                            <legend>Course 2</legend>
+                            <label for="course-2-department">Department
+                                <input id="course-2-department" name="course-department" type="text" value="ITIS" placeholder="Department" required>
+                            </label>
+                            <label for="course-2-number">Number
+                                <input id="course-2-number" name="course-number" type="text" value="3130" placeholder="Course number" required>
+                            </label>
+                            <label for="course-2-name">Name
+                                <input id="course-2-name" name="course-name" type="text" value="Human-Centered Computing" placeholder="Course name" required>
+                            </label>
+                            <label for="course-2-reason">Reason
+                                <textarea id="course-2-reason" name="course-reason" placeholder="Why are you taking this course?" required>This class will teach me what is considered good and bad for customers using tech.</textarea>
+                            </label>
+                            <button class="remove-course" type="button">Remove course</button>
+                        </fieldset>
+                        <fieldset class="course-entry">
+                            <legend>Course 3</legend>
+                            <label for="course-3-department">Department
+                                <input id="course-3-department" name="course-department" type="text" value="ITIS" placeholder="Department" required>
+                            </label>
+                            <label for="course-3-number">Number
+                                <input id="course-3-number" name="course-number" type="text" value="3200" placeholder="Course number" required>
+                            </label>
+                            <label for="course-3-name">Name
+                                <input id="course-3-name" name="course-name" type="text" value="Intro to Info Security &amp; Privacy" placeholder="Course name" required>
+                            </label>
+                            <label for="course-3-reason">Reason
+                                <textarea id="course-3-reason" name="course-reason" placeholder="Why are you taking this course?" required>This course will teach me about the basics of cybersecurity and the common practices to use inside of the field and in tech.</textarea>
+                            </label>
+                            <button class="remove-course" type="button">Remove course</button>
+                        </fieldset>
+                        <fieldset class="course-entry">
+                            <legend>Course 4</legend>
+                            <label for="course-4-department">Department
+                                <input id="course-4-department" name="course-department" type="text" value="ITSC" placeholder="Department" required>
+                            </label>
+                            <label for="course-4-number">Number
+                                <input id="course-4-number" name="course-number" type="text" value="2600" placeholder="Course number" required>
+                            </label>
+                            <label for="course-4-name">Name
+                                <input id="course-4-name" name="course-name" type="text" value="Computing Professionals II" placeholder="Course name" required>
+                            </label>
+                            <label for="course-4-reason">Reason
+                                <textarea id="course-4-reason" name="course-reason" placeholder="Why are you taking this course?" required>This class will provide me useful knowledge for getting jobs and successfully networking in the tech industry.</textarea>
+                            </label>
+                            <button class="remove-course" type="button">Remove course</button>
+                        </fieldset>
+                        <fieldset class="course-entry">
+                            <legend>Course 5</legend>
+                            <label for="course-5-department">Department
+                                <input id="course-5-department" name="course-department" type="text" value="MATH" placeholder="Department" required>
+                            </label>
+                            <label for="course-5-number">Number
+                                <input id="course-5-number" name="course-number" type="text" value="1120" placeholder="Course number" required>
+                            </label>
+                            <label for="course-5-name">Name
+                                <input id="course-5-name" name="course-name" type="text" value="Calculus" placeholder="Course name" required>
+                            </label>
+                            <label for="course-5-reason">Reason
+                                <textarea id="course-5-reason" name="course-reason" placeholder="Why are you taking this course?" required>This math course will provide basic knowledge for calculus that will be the foundation for future math and computer science courses.</textarea>
+                            </label>
+                            <button class="remove-course" type="button">Remove course</button>
+                        </fieldset>
+                    </div>
+                    <button id="add-course" type="button">Add Course</button>
+                    <p id="course-message" aria-live="polite"></p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Quote</legend>
+                    <label for="quote">Quote
+                        <textarea id="quote" name="quote" placeholder="Your favorite quote" required>Your time is limited, so don't waste it living someone else's life.</textarea>
+                    </label>
+                    <label for="quote-author">Quote Author
+                        <input id="quote-author" name="quote-author" type="text" value="Steve Jobs" placeholder="Quote author" required>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information (optional)</legend>
+                    <label for="funny-thing">Funny Thing
+                        <textarea id="funny-thing" name="funny-thing" placeholder="Something funny about you (optional)"></textarea>
+                    </label>
+                    <label for="share">Something I Would Like to Share
+                        <textarea id="share" name="share" placeholder="Something you would like to share (optional)"></textarea>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Personal Links</legend>
+                    <label for="link-clt">CLT Web
+                        <input id="link-clt" name="link-clt" type="url" value="https://webpages.charlotte.edu/owalczak/" placeholder="https://example.com" required>
+                    </label>
+                    <label for="link-githubio">GitHub.io
+                        <input id="link-githubio" name="link-githubio" type="url" value="https://owalczak1.github.io/" placeholder="https://example.com" required>
+                    </label>
+                    <label for="link-github">GitHub
+                        <input id="link-github" name="link-github" type="url" value="https://github.com/Owalczak1" placeholder="https://example.com" required>
+                    </label>
+                    <label for="link-freecodecamp">freeCodeCamp
+                        <input id="link-freecodecamp" name="link-freecodecamp" type="url" value="https://www.freecodecamp.org/owalczak" placeholder="https://example.com" required>
+                    </label>
+                    <label for="link-codecademy">Codecademy
+                        <input id="link-codecademy" name="link-codecademy" type="url" value="https://www.codecademy.com/profiles/owalczak" placeholder="https://example.com" required>
+                    </label>
+                    <label for="link-linkedin">LinkedIn
+                        <input id="link-linkedin" name="link-linkedin" type="url" value="https://www.linkedin.com/in/oscar-walczak-755801430/" placeholder="https://example.com" required>
+                    </label>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                    <button id="clear-form" type="button">Clear</button>
+                </div>
+                <p id="form-error" role="alert"></p>
+            </form>
+        </section>
+        <section id="introduction-result" hidden>
+            <article id="introduction-content"></article>
+            <section aria-label="Generated introduction formats">
+                <h3>Generate Another Format</h3>
+                <div class="form-actions">
+                    <button id="generate-html" type="button">Generate HTML</button>
+                    <button id="generate-json" type="button">Generate JSON</button>
+                    <button id="generate-xml" type="button">Generate XML</button>
+                </div>
+                <pre id="generated-output" hidden aria-live="polite"></pre>
+            </section>
+            <p><a id="reset-introduction" href="#introduction-form">Reset the form to create another introduction</a></p>
+        </section>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/introduction.js"></script>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+</body>
+</html>

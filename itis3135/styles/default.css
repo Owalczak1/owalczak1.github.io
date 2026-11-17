@@ -142,7 +142,8 @@ main form > label {
 }
 
 main form input:not([type="radio"]),
-main form select {
+main form select,
+main form textarea {
     min-height: 40px;
     padding: 8px;
     border: 1px solid #52666b;
@@ -163,7 +164,70 @@ main form fieldset label {
     gap: 8px;
 }
 
-main form button {
+/* These classes group dynamic form controls and match the generated profile to introduction.html. */
+main form#introduction-form {
+    max-width: 720px;
+}
+
+main form#introduction-form fieldset > label,
+main form#introduction-form fieldset.course-entry label {
+    display: grid;
+    gap: 4px;
+    align-items: stretch;
+}
+
+main form#introduction-form fieldset.course-entry {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 12px;
+}
+
+main form#introduction-form fieldset.course-entry .remove-course {
+    grid-column: 1 / -1;
+}
+
+main form#introduction-form textarea {
+    min-height: 72px;
+}
+
+main form#introduction-form .course-list {
+    display: grid;
+    gap: 12px;
+}
+
+.main .form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+main #generated-output {
+    overflow-wrap: anywhere;
+    padding: 12px;
+    border: 1px solid #52666b;
+    border-radius: 4px;
+    white-space: pre-wrap;
+}
+
+main form#introduction-form #form-error,
+main form#introduction-form #course-message {
+    color: #8b0000;
+}
+
+.introduction-links {
+    margin: 16px 0;
+    line-height: 2;
+    text-align: center;
+}
+
+.intro-figure figcaption {
+    font-style: italic;
+}
+
+.main blockquote {
+    text-align: center;
+}
+
+main button {
     width: fit-content;
     padding: 10px 16px;
     border: 0;
@@ -301,6 +365,10 @@ footer {
 
     .card-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    main form#introduction-form fieldset.course-entry {
+        grid-template-columns: 1fr;
     }
 
     .photo-format-links {
