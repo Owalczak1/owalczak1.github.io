@@ -3,7 +3,8 @@ const form = document.getElementById("introduction-form");
 if (form) {
     const formSection = document.getElementById("introduction-form-section");
     const resultSection = document.getElementById("introduction-result");
-    const introductionContent = document.getElementById("introduction-content");
+    const introductionBody = document.getElementById("introduction-body");
+    const acknowledgmentDate = document.getElementById("acknowledgment-date");
     const generatedOutputSection = document.getElementById("generated-output-section");
     const generatedOutput = document.getElementById("generated-output");
     const courseList = document.getElementById("course-list");
@@ -60,12 +61,18 @@ if (form) {
         courseMessage.textContent = "";
     }
 
+    function clearGeneratedOutput() {
+        generatedOutput.value = "";
+        generatedOutputSection.hidden = true;
+    }
+
     function resetProgress() {
         form.reset();
         restoreDefaultCourses();
         formError.textContent = "";
         form.querySelectorAll('input[type="url"]').forEach((input) => input.setCustomValidity(""));
-        introductionContent.replaceChildren();
+        introductionBody.replaceChildren();
+        acknowledgmentDate.setCustomValidity("");
         clearGeneratedOutput();
         resultSection.hidden = true;
         formSection.hidden = false;
@@ -74,11 +81,6 @@ if (form) {
             uploadedImageUrl = "";
             uploadedImageFile = null;
         }
-    }
-
-    function clearGeneratedOutput() {
-        generatedOutput.value = "";
-        generatedOutputSection.hidden = true;
     }
 
     function getValue(name) {
@@ -147,7 +149,7 @@ if (form) {
         const pictureCaption = getValue("picture-caption");
         const courses = getCourses();
         const introduction = document.createDocumentFragment();
-        const heading = document.createElement("h6");
+        const heading = document.createElement("h5");
         const figure = document.createElement("figure");
         const image = document.createElement("img");
         const caption = document.createElement("figcaption");
@@ -316,6 +318,18 @@ if (form) {
         generatedOutputSection.hidden = false;
     }
 
+    function validateAcknowledgmentDate() {
+        const value = acknowledgmentDate.value;
+        const date = new Date(`${value}T00:00:00Z`);
+        const isValidDate = value
+            && !Number.isNaN(date.getTime())
+            && date.toISOString().slice(0, 10) === value;
+
+        acknowledgmentDate.setCustomValidity(
+            value && !isValidDate ? "Enter a valid date in YYYY-MM-DD format." : ""
+        );
+    }
+
     function generateHtml() {
         const wrapper = document.createElement("div");
         wrapper.append(buildIntroduction());
@@ -374,11 +388,13 @@ if (form) {
         window.setTimeout(() => {
             restoreDefaultCourses();
             formError.textContent = "";
+            acknowledgmentDate.setCustomValidity("");
             form.querySelectorAll('input[type="url"]').forEach((input) => input.setCustomValidity(""));
             clearGeneratedOutput();
         }, 0);
     });
 
+    acknowledgmentDate.addEventListener("input", () => acknowledgmentDate.setCustomValidity(""));
     form.addEventListener("input", clearGeneratedOutput);
     form.addEventListener("change", clearGeneratedOutput);
 
@@ -400,6 +416,7 @@ if (form) {
             );
         });
 
+        validateAcknowledgmentDate();
         if (!form.reportValidity()) {
             return;
         }
@@ -416,7 +433,7 @@ if (form) {
             return;
         }
 
-        introductionContent.replaceChildren(buildIntroduction());
+        introductionBody.replaceChildren(buildIntroduction());
         formSection.hidden = true;
         resultSection.hidden = false;
     });

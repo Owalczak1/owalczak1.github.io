@@ -3,6 +3,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+:root {
+    --h5-font-size: 2rem;
+    --h5-white-space: nowrap;
+}
+
 body {
     margin: 8px;
     max-width: 1200px;
@@ -95,20 +100,20 @@ h2 {
     text-align: center;
 }
 
-h6 {
+h5 {
     margin: 16px 0;
-    font-size: 2rem;
-    white-space: nowrap;
+    font-size: var(--h5-font-size);
+    white-space: var(--h5-white-space);
     text-align: center;
 }
 
-.card-grid {
+.card-grad {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
 }
 
-.card-grid figure {
+.card-grad figure {
     margin: 0;
     padding: 12px;
     border: 1px solid #b8c5c7;
@@ -117,33 +122,33 @@ h6 {
     background-color: white;
 }
 
-.card-grid img {
+.card-grad img {
     width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
-.card-grid figcaption {
+.card-grad figcaption {
     margin-top: 8px;
     font-weight: 700;
 }
 
-main form {
+form {
     display: grid;
     gap: 12px;
     max-width: 720px;
     margin: 20px auto;
 }
 
-main form > label {
+form > label {
     display: grid;
     gap: 4px;
     font-weight: 700;
 }
 
-main form input:not([type="radio"]),
-main form select,
-main form textarea {
+form input:not([type="radio"]),
+form select,
+form textarea {
     min-height: 40px;
     padding: 8px;
     border: 1px solid #52666b;
@@ -151,45 +156,45 @@ main form textarea {
     font: inherit;
 }
 
-main form fieldset {
+form fieldset {
     display: grid;
     gap: 8px;
     border: 1px solid #52666b;
     border-radius: 4px;
 }
 
-main form fieldset label {
+form fieldset label {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
 /* These classes group dynamic form controls and match the generated profile to introduction.html. */
-main form#introduction-form {
+#introduction-form {
     max-width: 720px;
 }
 
-main form#introduction-form fieldset > label,
-main form#introduction-form fieldset.course-entry label {
+#introduction-form fieldset > label,
+#introduction-form fieldset.course-entry label {
     display: grid;
     gap: 4px;
     align-items: stretch;
 }
 
-main form#introduction-form fieldset.course-entry {
+#introduction-form fieldset.course-entry {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 12px;
 }
 
-main form#introduction-form fieldset.course-entry .remove-course {
+#introduction-form fieldset.course-entry .remove-course {
     grid-column: 1 / -1;
 }
 
-main form#introduction-form textarea {
+#introduction-form textarea {
     min-height: 72px;
 }
 
-main form#introduction-form .course-list {
+#introduction-form .course-list {
     display: grid;
     gap: 12px;
 }
@@ -200,9 +205,10 @@ main form#introduction-form .course-list {
     gap: 12px;
 }
 
-main #generated-output {
+#generated-output {
     display: block;
-    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     min-height: 320px;
     margin-top: 12px;
     overflow-wrap: anywhere;
@@ -214,8 +220,8 @@ main #generated-output {
     resize: vertical;
 }
 
-main form#introduction-form #form-error,
-main form#introduction-form #course-message {
+#introduction-form #form-error,
+#introduction-form #course-message {
     color: #8b0000;
 }
 
@@ -233,8 +239,7 @@ main form#introduction-form #course-message {
     text-align: center;
 }
 
-main button {
-    width: fit-content;
+button {
     padding: 10px 16px;
     border: 0;
     border-radius: 4px;
@@ -246,26 +251,26 @@ main button {
     cursor: pointer;
 }
 
-main table {
+table {
     width: 100%;
     border-collapse: collapse;
 }
 
-main section figure img {
+section figure img {
     display: block;
     max-width: 100%;
     height: auto;
     margin: 0 auto;
 }
 
-main caption {
+caption {
     padding: 12px;
     font-weight: 700;
     text-align: left;
 }
 
-main th,
-main td {
+th,
+td {
     padding: 10px;
     border: 1px solid #52666b;
     text-align: left;
@@ -273,8 +278,8 @@ main td {
 
 /* These classes keep the picture-format and image-quality comparisons grouped and responsive. */
 .photo-format-links,
-.distorted-image-grid,
-.resolution-comparison-grid {
+.distorted-image-grad,
+.resolution-comparison-grad {
     display: grid;
     gap: 12px;
     margin: 16px 0;
@@ -293,37 +298,32 @@ main td {
     background-color: white;
 }
 
-.distorted-image-grid,
-.resolution-comparison-grid {
+.distorted-image-grad,
+.resolution-comparison-grad {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.distorted-image-grid figure,
-.resolution-comparison-grid figure {
+.distorted-image-grad figure,
+.resolution-comparison-grad figure {
     min-width: 0;
     margin: 0;
 }
 
-.distorted-image-grid img {
+.distorted-image-grad img {
     max-width: 100%;
     height: auto;
 }
 
-.resolution-comparison-grid img {
+.resolution-comparison-grad img {
     width: 100%;
     height: auto;
 }
 
 .page-title {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
-    border: 0;
 }
 
 .main li {
@@ -364,16 +364,16 @@ footer {
         width: min(65%, 240px);
     }
 
-    main h6 {
-        font-size: 1.4rem;
-        white-space: normal;
+    :root {
+        --h5-font-size: 1.4rem;
+        --h5-white-space: normal;
     }
 
-    .card-grid {
+    .card-grad {
         grid-template-columns: 1fr 1fr;
     }
 
-    main form#introduction-form fieldset.course-entry {
+    #introduction-form fieldset.course-entry {
         grid-template-columns: 1fr;
     }
 
@@ -381,8 +381,8 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 
-    .distorted-image-grid,
-    .resolution-comparison-grid {
+    .distorted-image-grad,
+    .resolution-comparison-grad {
         grid-template-columns: 1fr;
     }
 }

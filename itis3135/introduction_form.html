@@ -41,7 +41,7 @@
                         <textarea id="acknowledgment" name="acknowledgment" placeholder="Enter your acknowledgment statement" required>I acknowledge that the work I submit is my own and that I have followed the course academic integrity policy.</textarea>
                     </label>
                     <label for="acknowledgment-date">Acknowledgment Date
-                        <input id="acknowledgment-date" name="acknowledgment-date" type="date" value="2026-11-16" placeholder="YYYY-MM-DD" required>
+                        <input id="acknowledgment-date" name="acknowledgment-date" type="text" value="2026-11-16" placeholder="YYYY-MM-DD" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" title="Enter a date in YYYY-MM-DD format" required>
                     </label>
                 </fieldset>
 
@@ -237,8 +237,12 @@
                 <p id="form-error" role="alert"></p>
             </form>
         </section>
-        <section id="introduction-result" hidden>
-            <article id="introduction-content"></article>
+        <section id="introduction-result" hidden aria-labelledby="introduction-result-heading">
+            <h3 id="introduction-result-heading">Introduction Preview</h3>
+            <article id="introduction-content" aria-labelledby="introduction-content-heading">
+                <h4 id="introduction-content-heading">Generated Introduction</h4>
+                <div id="introduction-body"></div>
+            </article>
             <p><a id="reset-introduction" href="#introduction-form">Reset the form to create another introduction</a></p>
         </section>
         <section aria-labelledby="generate-code-heading">
