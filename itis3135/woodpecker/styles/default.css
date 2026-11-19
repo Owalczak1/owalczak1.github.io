@@ -1,0 +1,252 @@
+:root {
+    color-scheme: light;
+    --forest: #173c32;
+    --forest-light: #245847;
+    --paper: #fff8e9;
+    --paper-shadow: #e8dfcb;
+    --ink: #1d2923;
+    --rust: #a4472e;
+    --gold: #f0c86c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 76rem;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: var(--forest);
+    color: var(--ink);
+    font-family: "DM Sans", Arial, sans-serif;
+    line-height: 1.65;
+}
+
+header {
+    padding: 1.5rem clamp(1rem, 5vw, 4rem) 1.25rem;
+    background: var(--forest);
+    color: var(--paper);
+}
+
+header > img {
+    display: block;
+    width: 7rem;
+    height: 4.1rem;
+    margin: 0 auto 0.6rem;
+    object-fit: contain;
+}
+
+h1 {
+    margin: 0;
+    color: var(--gold);
+    font-family: "Bree Serif", Georgia, serif;
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    letter-spacing: 0.04em;
+    line-height: 1;
+    text-align: center;
+}
+
+header > p {
+    margin: 0.75rem 0 1.25rem;
+    color: var(--paper);
+    font-family: "Bree Serif", Georgia, serif;
+    font-size: 1.15rem;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    color: var(--paper);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: var(--paper);
+}
+
+footer nav a:visited {
+    color: var(--gold);
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav a[aria-current="page"] {
+    border-color: var(--gold);
+    background: var(--forest-light);
+    color: var(--paper);
+}
+
+nav a:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+main {
+    width: calc(100% - 2rem);
+    max-width: 66rem;
+    min-height: 65vh;
+    margin: 2rem auto;
+    padding: clamp(1.25rem, 5vw, 3.5rem);
+    border: 1px solid var(--paper-shadow);
+    border-radius: 1.5rem;
+    background: var(--paper);
+    box-shadow: 0 1rem 2.5rem rgb(23 60 50 / 18%);
+}
+
+/* The home-main ID identifies the landing landmark; the home-page class scopes its spacing. */
+.home-page {
+    padding-bottom: clamp(2rem, 6vw, 4rem);
+}
+
+h2 {
+    margin-top: 0;
+    color: var(--forest);
+    font-family: "Bree Serif", Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.15;
+}
+
+h3 {
+    color: var(--rust);
+    font-family: "Bree Serif", Georgia, serif;
+}
+
+main section {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--paper-shadow);
+}
+
+form {
+    display: grid;
+    max-width: 42rem;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+form label {
+    display: grid;
+    gap: 0.35rem;
+    font-weight: 700;
+}
+
+form input,
+form select,
+form button {
+    min-height: 2.75rem;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid var(--forest);
+    border-radius: 0.45rem;
+    font: inherit;
+}
+
+form button {
+    width: fit-content;
+    background: var(--forest);
+    color: var(--paper);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+form button:hover,
+form button:focus-visible {
+    background: var(--rust);
+}
+
+output {
+    display: block;
+    min-height: 1.65em;
+    margin-top: 0.75rem;
+    color: var(--forest);
+    font-weight: 700;
+}
+
+a {
+    color: #80351f;
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.15em;
+}
+
+a:visited {
+    color: #80351f;
+}
+
+figure {
+    max-width: 48rem;
+    margin: 2rem auto 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: #f0e7d5;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 25rem;
+    object-fit: contain;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    color: var(--forest);
+    font-weight: 700;
+    text-align: center;
+}
+
+main aside {
+    padding: 0.75rem 1rem;
+    border-left: 0.35rem solid var(--rust);
+    background: #f5ead5;
+}
+
+footer {
+    padding: 1.5rem 1rem 2rem;
+    color: var(--paper);
+    text-align: center;
+}
+
+footer p {
+    margin: 0.4rem;
+}
+
+footer nav {
+    margin-top: 0.75rem;
+}
+
+footer nav a {
+    color: var(--gold);
+}
+
+@media (max-width: 42rem) {
+    header {
+        padding-right: 0.75rem;
+        padding-left: 0.75rem;
+    }
+
+    nav {
+        gap: 0.25rem;
+    }
+
+    nav a {
+        padding: 0.4rem 0.55rem;
+    }
+
+    main {
+        width: calc(100% - 1rem);
+        margin: 1rem auto;
+    }
+}

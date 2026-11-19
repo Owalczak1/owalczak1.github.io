@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Woodpecker turns one repetitive computer task into one small, useful automation.">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/default.css">
+    <title>Woodpecker | Woodpecker: Home</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <template data-include="components/header.html" data-replace="%page%:index"></template>
+    <!-- The ID identifies the home landmark; the class scopes home-page spacing. -->
+    <main id="home-main" class="home-page">
+        <h2>Woodpecker: Home</h2>
+        <p>Ever catch yourself repeating the same tiny computer task until it feels like your whole afternoon? Woodpecker is a pop-up automation booth built around that one small annoyance. Bring us a repetitive task, and we will help turn it into a shortcut, script, or mini-tool.</p>
+        <p>We keep the scope intentionally small: one task, one clear solution, and a handoff you can understand. No giant software rollout, no mystery subscription, and no need to change your whole workflow just to save a few clicks.</p>
+        <aside>
+            <p>Woodpecker is a student business concept for this course project, not an operating service.</p>
+        </aside>
+        <figure>
+            <img src="images/frontwoodpecker.svg" alt="Front-facing illustration of a woodpecker" width="489" height="683">
+            <figcaption>Woodpecker finds the small task worth fixing.</figcaption>
+        </figure>
+        <section>
+            <h3>Need A Small Task Idea?</h3>
+            <p>Try thinking about a short digital chore you repeat every week. A good first fix has the same steps each time and a clear finish.</p>
+            <output aria-live="polite">Rename a batch of lecture files the same way every week.</output>
+            <button type="button">Suggest another task</button>
+        </section>
+    </main>
+    <template data-include="components/footer.html" data-replace="%page%:index"></template>
+    <script src="../scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/woodpecker.js"></script>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+</body>
+</html>

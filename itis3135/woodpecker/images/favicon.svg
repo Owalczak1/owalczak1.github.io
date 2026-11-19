@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+    <title id="title">Woodpecker</title>
+    <rect width="64" height="64" rx="14" fill="#173c32"/>
+    <path d="M25 51c-9-9-12-23-4-33 8-10 23-8 29 1 6 10-1 24-13 30l-5-8Z" fill="#f0c86c"/>
+    <path d="M23 18c5-12 20-14 29-5-9-1-12 4-13 9-5-4-10-5-16-4Z" fill="#a4472e"/>
+    <path d="m45 27 16 5-16 5Z" fill="#fff8e9"/>
+    <circle cx="41" cy="24" r="2.5" fill="#173c32"/>
+</svg>

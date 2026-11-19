@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Woodpecker's small menu of scripts, shortcuts, and mini-tools for repetitive tasks.">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/default.css">
+    <title>Woodpecker | Woodpecker: Services</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <template data-include="components/header.html" data-replace="%page%:services"></template>
+    <main>
+        <h2>Woodpecker: Services</h2>
+        <p>Our menu has three kinds of small solution: a script for a repeatable sequence, a shortcut for a frequently used action, or a mini-tool for a simple transformation such as renaming a batch of files. Each starts with one specific task and ends with a working example.</p>
+        <p>We do not take on full websites, account recovery, device repair, or tools that collect sensitive information. If a task needs a larger system, we will help outline the next step rather than disguise a big project as a quick fix.</p>
+        <ul>
+            <li><strong>Script:</strong> repeat a predictable sequence.</li>
+            <li><strong>Shortcut:</strong> make a common action easier to reach.</li>
+            <li><strong>Mini-tool:</strong> handle one small batch or conversion.</li>
+        </ul>
+        <section>
+            <h3>Estimate Time For One Repeat Task</h3>
+            <p>Enter the time for one run and how often it happens in a typical week. This estimate assumes the automation removes the entire task and is only a way to compare its potential payoff.</p>
+            <form name="savings-estimator" aria-label="Weekly time-saved estimator">
+                <label>Minutes per run
+                    <input type="number" name="task-minutes" min="1" step="1" value="5" required>
+                </label>
+                <label>Runs per week
+                    <input type="number" name="weekly-repeats" min="1" step="1" value="4" required>
+                </label>
+                <button type="submit">Estimate weekly time</button>
+                <output aria-live="polite">Enter the task details to estimate potential time saved.</output>
+            </form>
+        </section>
+        <figure>
+            <img src="images/sittingwoodpecker.svg" alt="Illustration of a woodpecker sitting beside the service menu" width="263" height="317">
+            <figcaption>A short menu, so every fix stays focused.</figcaption>
+        </figure>
+    </main>
+    <template data-include="components/footer.html" data-replace="%page%:services"></template>
+    <script src="../scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/woodpecker.js"></script>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+</body>
+</html>

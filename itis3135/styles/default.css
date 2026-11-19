@@ -267,6 +267,7 @@ form fieldset label {
     padding: 16px;
     border: 1px solid #b8c5c7;
     border-radius: 8px;
+    /* White profile cards keep text and introduction photos clear against the page background. */
     background-color: white;
     box-shadow: 2px 2px 5px #aaa;
 }

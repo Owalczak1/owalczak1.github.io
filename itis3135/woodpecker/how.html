@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="See how Woodpecker scopes, builds, tests, and hands off a one-task automation.">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/default.css">
+    <title>Woodpecker | Woodpecker: How</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <template data-include="components/header.html" data-replace="%page%:how"></template>
+    <main>
+        <h2>Woodpecker: How</h2>
+        <p>First, we watch the task happen and agree on what should change and what must stay the same. Next, we sketch the smallest safe approach and build a test version using sample information rather than private account data.</p>
+        <p>Finally, we try the tool with its owner, explain how to run it and undo its effects, and leave a short set of instructions. If it cannot be tested clearly in the session, we pause and describe the next step instead of calling unfinished work a success.</p>
+        <ol>
+            <li>Observe and define one task.</li>
+            <li>Build and test a small solution.</li>
+            <li>Explain, hand off, and document it.</li>
+        </ol>
+        <figure>
+            <img src="images/flyingwoodpecker.svg" alt="Illustration of a flying woodpecker moving through the process" width="307" height="311">
+            <figcaption>A tiny, transparent process from first look to handoff.</figcaption>
+        </figure>
+    </main>
+    <template data-include="components/footer.html" data-replace="%page%:how"></template>
+    <script src="../scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/woodpecker.js"></script>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+</body>
+</html>

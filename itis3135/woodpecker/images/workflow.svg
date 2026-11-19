@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title description">
+    <title id="title">Woodpecker's four-step workflow</title>
+    <desc id="description">Four connected circles show observe, sketch, test, and hand off.</desc>
+    <rect width="720" height="420" rx="28" fill="#e9ddc5"/>
+    <path d="M130 205h460" stroke="#173c32" stroke-width="12" stroke-linecap="round"/>
+    <g font-family="Arial, sans-serif" font-weight="700" text-anchor="middle">
+        <circle cx="145" cy="205" r="57" fill="#fff8e9" stroke="#a4472e" stroke-width="8"/>
+        <circle cx="288" cy="205" r="57" fill="#245847" stroke="#173c32" stroke-width="8"/>
+        <circle cx="432" cy="205" r="57" fill="#f0c86c" stroke="#a4472e" stroke-width="8"/>
+        <circle cx="575" cy="205" r="57" fill="#fff8e9" stroke="#173c32" stroke-width="8"/>
+        <text x="145" y="216" fill="#173c32" font-size="22">1</text>
+        <text x="288" y="216" fill="#fff8e9" font-size="22">2</text>
+        <text x="432" y="216" fill="#173c32" font-size="22">3</text>
+        <text x="575" y="216" fill="#173c32" font-size="22">4</text>
+        <text x="145" y="305" fill="#173c32" font-size="17">OBSERVE</text>
+        <text x="288" y="305" fill="#173c32" font-size="17">SKETCH</text>
+        <text x="432" y="305" fill="#173c32" font-size="17">TEST</text>
+        <text x="575" y="305" fill="#173c32" font-size="17">HAND OFF</text>
+    </g>
+</svg>

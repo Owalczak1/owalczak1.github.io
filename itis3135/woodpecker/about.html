@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet Woodpecker, a tiny automation booth that starts with how people actually work.">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/default.css">
+    <title>Woodpecker | Woodpecker: About</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <template data-include="components/header.html" data-replace="%page%:about"></template>
+    <main>
+        <h2>Woodpecker: About</h2>
+        <p>Woodpecker is a neighborhood-scale idea for people who have a useful routine but keep doing its most tedious part by hand. We begin with your actual steps, not a pitch for the newest app or a complicated system you did not ask for.</p>
+        <p>The name comes from the bird that keeps returning to one spot with purpose. Our version pecks away at one repeat task at a time, then stops when the job is done. That makes each project easier to explain, test, and hand back to its owner.</p>
+        <figure>
+            <img src="images/sittingwoodpecker.svg" alt="Illustration of a woodpecker sitting on a branch" width="263" height="317">
+            <figcaption>A focused bird for focused little fixes.</figcaption>
+        </figure>
+        <section>
+            <h3>Is It A Woodpecker-Size Task?</h3>
+            <p>Automation works best when the steps stay consistent and the expected result is clear. Use this quick check to decide whether a task is a good starting point.</p>
+            <form name="task-fit" aria-label="Automation task fit check">
+                <label>Does it follow the same steps each time?
+                    <select name="same-steps" required>
+                        <option value="">Choose an answer</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </label>
+                <label>Can you describe the expected result?
+                    <select name="clear-result" required>
+                        <option value="">Choose an answer</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </label>
+                <button type="submit">Check task fit</button>
+                <output aria-live="polite">Choose answers to get a quick fit check.</output>
+            </form>
+        </section>
+    </main>
+    <template data-include="components/footer.html" data-replace="%page%:about"></template>
+    <script src="../scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/woodpecker.js"></script>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+</body>
+</html>
