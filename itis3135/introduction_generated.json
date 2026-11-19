@@ -1,66 +1,62 @@
 {
-  "first-name": "Oscar",
-  "middle-name": "",
-  "preferred-name": "",
-  "last-name": "Walczak",
+  "firstName": "Oscar",
+  "middleName": "",
+  "nickname": "",
+  "lastName": "Walczak",
   "acknowledgment": "I acknowledge that the work I submit is my own and that I have followed the course academic integrity policy.",
-  "acknowledgment-date": "2026-11-16",
-  "mascot-adjective": "Outstanding",
-  "mascot-animal": "Woodpecker",
-  "divider": "|",
-  "picture-source": "images/srcimg.png",
-  "picture-caption": "My previous course introduction picture",
-  "personal-statement": "I am a Computer Science major, and I like going to the UREC center on campus. I am a full-time student at UNC Charlotte. I am interested in learning more about web development and technology.",
-  "personal-background": "Born in Massachussetts, grew up in huntersville",
-  "professional-background": "Working at Harris Teeter part time, currently full time student",
-  "academic-background": "Computer Science 2028 (expected)",
-  "work-computer": "Hp Omnibook X Flip, Windows 11, 24H2",
-  "work-location": "In my dorm",
-  "alternate-computer": "Uncc Library",
-  "quote": "Your time is limited, so don't waste it living someone else's life.",
-  "quote-author": "Steve Jobs",
-  "funny-thing": "",
-  "share": "",
-  "link-clt": "https://webpages.charlotte.edu/owalczak/",
-  "link-githubio": "https://owalczak1.github.io/",
-  "link-github": "https://github.com/Owalczak1",
-  "link-freecodecamp": "https://www.freecodecamp.org/owalczak",
-  "link-codecademy": "https://www.codecademy.com/profiles/owalczak",
-  "link-linkedin": "https://www.linkedin.com/in/oscar-walczak-755801430/",
-  "picture": "images/srcimg.png",
+  "acknowledgmentDate": "11/16/26",
+  "prettyNameDivider": "|",
+  "adjectives": "Outstanding",
+  "animal": "Woodpecker",
+  "img": "images/srcimg.png",
+  "pictureAlt": "My previous course introduction picture",
+  "caption": "My previous course introduction picture",
+  "personalInfo": {
+    "statement": "I am a Computer Science major, and I like going to the UREC center on campus. I am a full-time student at UNC Charlotte. I am interested in learning more about web development and technology.",
+    "personalBackground": "Born in Massachussetts, grew up in huntersville",
+    "professionalBackground": "Working at Harris Teeter part time, currently full time student",
+    "academicBackground": "Computer Science 2028 (expected)",
+    "primaryWorkComputer": "Hp Omnibook X Flip, Windows 11, 24H2",
+    "primaryWorkLocation": "In my dorm",
+    "alternateComputerLocation": "Uncc Library"
+  },
   "courses": [
     {
       "department": "ITIS",
-      "number": "3135",
-      "name": "Front-End Web App Development",
-      "reason": "I am taking this course because it is required for the major and it will teach me alot of things about web development for the future."
+      "courseNumber": "3135",
+      "courseTitle": "Front-End Web App Development",
+      "reasonForTaking": "I am taking this course because it is required for the major and it will teach me alot of things about web development for the future."
     },
     {
       "department": "ITIS",
-      "number": "3130",
-      "name": "Human-Centered Computing",
-      "reason": "This class will teach me what is considered good and bad for customers using tech."
+      "courseNumber": "3130",
+      "courseTitle": "Human-Centered Computing",
+      "reasonForTaking": "This class will teach me what is considered good and bad for customers using tech."
     },
     {
       "department": "ITIS",
-      "number": "3200",
-      "name": "Intro to Info Security & Privacy",
-      "reason": "This course will teach me about the basics of cybersecurity and the common practices to use inside of the field and in tech."
+      "courseNumber": "3200",
+      "courseTitle": "Intro to Info Security & Privacy",
+      "reasonForTaking": "This course will teach me about the basics of cybersecurity and the common practices to use inside of the field and in tech."
     },
     {
       "department": "ITSC",
-      "number": "2600",
-      "name": "Computing Professionals II",
-      "reason": "This class will provide me useful knowledge for getting jobs and successfully networking in the tech industry."
+      "courseNumber": "2600",
+      "courseTitle": "Computing Professionals II",
+      "reasonForTaking": "This class will provide me useful knowledge for getting jobs and successfully networking in the tech industry."
     },
     {
       "department": "MATH",
-      "number": "1120",
-      "name": "Calculus",
-      "reason": "This math course will provide basic knowledge for calculus that will be the foundation for future math and computer science courses."
+      "courseNumber": "1120",
+      "courseTitle": "Calculus",
+      "reasonForTaking": "This math course will provide basic knowledge for calculus that will be the foundation for future math and computer science courses."
     }
   ],
-  "links": [
+  "quote": "Your time is limited, so don't waste it living someone else's life.",
+  "quoteAuthor": "Steve Jobs",
+  "funnyItem": "",
+  "somethingToShare": "",
+  "footerLinks": [
     {
       "label": "CLT Web",
       "url": "https://webpages.charlotte.edu/owalczak/"

@@ -260,18 +260,10 @@ if (form) {
     }
 
     function getIntroductionData() {
-        const data = {};
-        Array.from(form.elements).forEach((control) => {
-            if (control.name && control.type !== "file" && !control.name.startsWith("course-")) {
-                data[control.name] = control.value.trim();
-            }
-        });
         const uploadedPicture = form.elements.namedItem("picture-upload").files[0];
-        data.picture = uploadedPicture
-            ? uploadedPicture.name
-            : getValue("picture-source") || "images/srcimg.png";
-        data.courses = getCourses();
-        data.links = [
+        const acknowledgmentDateValue = getValue("acknowledgment-date");
+        const dateParts = acknowledgmentDateValue.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+        const footerLinks = [
             ["CLT Web", "link-clt"],
             ["GitHub.io", "link-githubio"],
             ["GitHub", "link-github"],
@@ -279,7 +271,45 @@ if (form) {
             ["Codecademy", "link-codecademy"],
             ["LinkedIn", "link-linkedin"]
         ].map(([label, fieldName]) => ({ label, url: getValue(fieldName) }));
-        return data;
+
+        return {
+            firstName: getValue("first-name"),
+            middleName: getValue("middle-name"),
+            nickname: getValue("preferred-name"),
+            lastName: getValue("last-name"),
+            acknowledgment: getValue("acknowledgment"),
+            acknowledgmentDate: dateParts
+                ? `${Number(dateParts[2])}/${Number(dateParts[3])}/${dateParts[1].slice(-2)}`
+                : acknowledgmentDateValue,
+            prettyNameDivider: getValue("divider"),
+            adjectives: getValue("mascot-adjective"),
+            animal: getValue("mascot-animal"),
+            img: uploadedPicture
+                ? uploadedPicture.name
+                : getValue("picture-source"),
+            pictureAlt: getValue("picture-caption"),
+            caption: getValue("picture-caption"),
+            personalInfo: {
+                statement: getValue("personal-statement"),
+                personalBackground: getValue("personal-background"),
+                professionalBackground: getValue("professional-background"),
+                academicBackground: getValue("academic-background"),
+                primaryWorkComputer: getValue("work-computer"),
+                primaryWorkLocation: getValue("work-location"),
+                alternateComputerLocation: getValue("alternate-computer")
+            },
+            courses: getCourses().map((course) => ({
+                department: course.department,
+                courseNumber: course.number,
+                courseTitle: course.name,
+                reasonForTaking: course.reason
+            })),
+            quote: getValue("quote"),
+            quoteAuthor: getValue("quote-author"),
+            funnyItem: getValue("funny-thing"),
+            somethingToShare: getValue("share"),
+            footerLinks
+        };
     }
 
     function escapeXml(value) {
@@ -303,10 +333,16 @@ if (form) {
                 }).join("\n");
                 return `  <courses>\n${courses}\n  </courses>`;
             }
-            if (name === "links") {
+            if (name === "personalInfo") {
+                const personalInfo = Object.entries(value)
+                    .map(([field, content]) => `    <${field}>${escapeXml(content)}</${field}>`)
+                    .join("\n");
+                return `  <personalInfo>\n${personalInfo}\n  </personalInfo>`;
+            }
+            if (name === "footerLinks") {
                 const links = value.map((link) => `    <link label="${escapeXml(link.label)}">${escapeXml(link.url)}</link>`)
                     .join("\n");
-                return `  <links>\n${links}\n  </links>`;
+                return `  <footerLinks>\n${links}\n  </footerLinks>`;
             }
             return `  <${name}>${escapeXml(value)}</${name}>`;
         }).join("\n");
